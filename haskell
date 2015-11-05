@@ -1,0 +1,20 @@
+sudo apt-get -y install build-essential curl zlib1g-dev libgmp3-dev libedit2
+
+curl -O http://www.haskell.org/ghc/dist/X.X.X/ghc-X.X.X-x86_64-unknown-linux-deb7.tar.bz2
+tar xvfj ghc-X.X.X-x86_64-unknown-linux-deb7.tar.bz2
+# cd  ghc-X.X.X
+make install
+
+curl -O https://www.haskell.org/cabal/release/cabal-install-X.X.X.X/cabal-install-X.X.X.X.tar.gz
+tar xvzf cabal-install-X.X.X.X.tar.gz
+# cd cabal-install-X.X.X.X
+./bootstrap.sh
+
+# add cabal bin to path
+# append to ~/.zshrc
+# if [ -d $HOME/.cabal/bin ]; then
+#  export PATH="$HOME/.cabal/bin:$PATH"
+# fi
+
+which ghc
+which cabal
